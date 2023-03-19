@@ -11,6 +11,7 @@ prev.addEventListener("click", () => {
       current = 0;
     }
     slideCont[current].classList.add("selected");
+    console.log("banana")
   });
   
   next.addEventListener("click", () => {
@@ -20,4 +21,5 @@ prev.addEventListener("click", () => {
       current = max - 1;
     }
     slideCont[current].classList.add("selected");
+    console.log("banana")
   });
