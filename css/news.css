@@ -66,8 +66,11 @@ html,body {
 header {
     width: 100%;
     padding: 10px;
-    background-color: #1F4F37;
-}
+    background-color: #1f4f37;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
 
 .list-mobile {
     width: 100px;

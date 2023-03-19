@@ -23,6 +23,9 @@ header {
   width: 100%;
   padding: 10px;
   background-color: #1f4f37;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 .list-mobile {
@@ -129,7 +132,7 @@ nav.mobile ul li a {
 
 .prof-people {
   width: 360px;
-  height: 400px;
+  /* height: 400px; */
 }
 
 .prof-people a {
@@ -151,7 +154,7 @@ nav.mobile ul li a {
 .prof-infor h1 {
   padding-bottom: 15px;
   text-align: center;
-  line-height: 11px;
+  line-height: 30px;
 }
 
 .prof-infor p {
