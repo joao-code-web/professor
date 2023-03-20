@@ -55,23 +55,20 @@ header {
 }
 
 .logo img {
-    width: 100%;
+    width: 150px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-.logo h1 {
-    display: inline-block;
-}
+}  
 
 nav.desktop {
     float: right;
 }
 
 nav.desktop ul {
+    padding-top: 15px;
     list-style-type: none;
-}
+  }
 
 nav.desktop ul li {
     float: left;
@@ -242,7 +239,15 @@ footer {
 }
 
 .logo-footer {
-    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.logo-footer img {
+    width: 100%;
+    padding-top: 5em;
+    background-position: center;
 }
 
 @media screen and (max-width: 950px) {

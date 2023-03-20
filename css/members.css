@@ -15,6 +15,53 @@ body {
   margin: auto;
 }
 
+.single-all {
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  height: 100vmax;
+  /* overflow: hidden; */
+  background-color: rgba(43, 36, 49, 0.763);
+  z-index: 999;
+  display: none;
+}
+
+.single {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.single-all i {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: white;
+  font-size: 40px;
+}
+
+.single img {
+  width: 100%;
+  height: 100%;
+}
+
+.single-text {
+  padding-top: 30px;
+  color: white;
+}
+
+.single-text h1 {
+  text-align: center;
+}
+
+.single-text p {
+  text-align: justify;
+}
+
 .clear {
   clear: both;
 }
@@ -90,9 +137,13 @@ nav.desktop ul li a {
   text-decoration: none;
 }
 
+nav.desktop ul li:nth-child(2) a {
+  color: aqua;
+}
+
 nav.mobile {
   transition: 1s;
-  display: none;
+  opacity: 0;
   position: absolute;
   left: 0px;
   top: 57px;
@@ -118,99 +169,107 @@ nav.mobile ul li:hover {
   border: 1px solid black;
 }
 
+nav.desktop ul li:nth-child(2) a,
+nav.mobile ul li:nth-child(2) a {
+  color: aqua;
+}
+
 nav.mobile ul li a {
   color: white;
   text-decoration: none;
 }
 
-.prof {
-  width: 100%;
+.members-detalhes {
+  margin: 90px auto;
   display: flex;
   justify-content: center;
-  margin: 120px auto;
+  flex-direction: column;
+  align-items: center;
 }
 
-.prof-people {
-  width: 360px;
-  /* height: 400px; */
-}
-
-.prof-people a {
+.title-members {
   width: 100%;
-  height: 100%;
-}
-
-.prof-people img {
-  width: 100%;
-  height: 100%;
-}
-
-.prof-infor {
-  padding: 10px;
-  text-align: justify;
-  width: 500px;
-}
-
-.prof-infor h1 {
-  padding-bottom: 15px;
   text-align: center;
-  line-height: 30px;
 }
 
-.prof-infor p {
-  font-size: 17px;
-  line-height: 16px;
-}
-
-.slide {
-  margin: 90px auto;
+.members-wraper {
   width: 100%;
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.postdocs {
+  margin: 10px auto;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.tittle-members {
+  width: 95%;
+  text-align: right;
+}
+
+.single-post {
+  width: 90%;
+  background-color: red;
+  padding: 0.5em;
+  margin: 10px auto;
+  display: flex;
   position: relative;
-  transition: all 1;
 }
 
-.slide a {
-  opacity: 0;
+.photo-members {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
 }
 
-.slide a img {
+.photo-members img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 100%;
+}
+
+.description-members {
+  width: 80%;
+  padding-left: 20px;
+  position: relative;
+}
+
+.description-members p {
+  padding-top: 20px;
+}
+
+.contact-members {
   position: absolute;
-  background-position: center;
-  transition: all 1;
-  margin: auto;
+  top: 10px;
+  right: 10px;
 }
 
-.slide a.selected {
-  opacity: 1;
+.phd {
+  margin: 10px auto;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
-.button {
-  font-size: 40px;
-  color: blueviolet;
-  cursor: pointer;
+.students {
+  margin: 10px auto;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
-.prev {
-  position: absolute;
-  left: -3%;
-  top: 50%;
-  cursor: pointer;
-}
-
-.next {
-  position: absolute;
-  right: -3%;
-  top: 50%;
-  cursor: pointer;
-}
-
-.prev i,
-.next i {
-  cursor: pointer;
+.bcsStuden {
+  margin: 10px auto;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -218,12 +277,11 @@ footer {
   background-color: #1f4f37;
   display: flex;
   margin: auto;
-  justify-content: space-between;
   color: white;
 }
 
 .footer-singles {
-  width: 40%;
+  width: 35%;
   padding: 10px 30px;
 }
 
@@ -250,11 +308,10 @@ footer {
 }
 
 .infor-footer {
-    padding-top: 10px;
-    width: 100%;
+  padding: 10px;
 }
 
-.winfor-footer h1 {
+.infor-footer h1 {
   font-size: 25px;
 }
 
@@ -280,25 +337,15 @@ footer {
 }
 
 .logo-footer {
-    width: 200px;
-    height: 200px;
-    margin: auto;
+  width: 200px;
+  height: 200px;
+  margin: auto;
 }
 
 .logo-footer img {
-    width: 100%;
-    padding-top: 5em;
-    background-position: center;
-}
-
-@media screen and (max-width: 1350px) {
-  .prev {
-    left: 0;
-  }
-
-  .next {
-    right: 0;
-  }
+  width: 100%;
+  padding-top: 5em;
+  background-position: center;
 }
 
 @media screen and (max-width: 950px) {
@@ -313,15 +360,8 @@ footer {
 
   .list-mobile i {
     display: block;
-    padding: 1em 0.5em;
+    display: inline-block;
   }
-
-  nav.mobile {
-    width: 100%;
-    padding: 10px;
-    height: 100vmax;
-    top: 92.1px;
-}
 
   footer {
     width: 100%;
@@ -342,29 +382,22 @@ footer {
 }
 
 @media screen and (max-width: 770px) {
-  .prof {
-    flex-direction: column;
-  }
-
-  .prof-people {
+  nav.mobile {
     width: 100%;
-    height: 400px;
-  }
-
-  .prof-people img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .prof-infor {
     padding: 10px;
-    text-align: justify;
-    width: 100%;
+    height: 200px;
+    top: 58px;
   }
 
-  .prof-infor h1 {
-    padding-bottom: 15px;
-    line-height: initial;
+  .students-single {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .text-prof-deta {
+    width: 70%;
+    padding-top: 30px;
   }
 
   footer {
@@ -386,23 +419,17 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-  .slide {
-    margin: 30px auto;
-    width: 100%;
-    height: 300px;
-    position: relative;
-    transition: all 1;
-  }
-
   footer {
     flex-direction: column;
   }
+
   .footer-singles {
     width: 90%;
     margin: 10px 0px;
     padding: 0px;
     text-align: justify;
   }
+
   .infor-footer {
     padding: 0px;
   }
