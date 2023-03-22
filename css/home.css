@@ -34,6 +34,7 @@ header {
   position: absolute;
   right: 0;
   top: 0;
+  display: none;
 }
 
 .list-mobile i {
@@ -130,17 +131,17 @@ nav.mobile ul li a {
   margin: 120px auto;
 }
 
-.prof-people {
+.prof-members {
   width: 360px;
   /* height: 400px; */
 }
 
-.prof-people a {
+.prof-members a {
   width: 100%;
   height: 100%;
 }
 
-.prof-people img {
+.prof-members img {
   width: 100%;
   height: 100%;
 }
@@ -220,6 +221,7 @@ footer {
   margin: auto;
   justify-content: space-between;
   color: white;
+  position: relative;
 }
 
 .footer-singles {
@@ -250,8 +252,8 @@ footer {
 }
 
 .infor-footer {
-    padding-top: 10px;
-    width: 100%;
+  padding-top: 10px;
+  width: 100%;
 }
 
 .winfor-footer h1 {
@@ -280,15 +282,31 @@ footer {
 }
 
 .logo-footer {
-    width: 200px;
-    height: 200px;
-    margin: auto;
+  width: 200px;
+  height: 200px;
+  margin: auto;
 }
 
 .logo-footer img {
-    width: 100%;
-    padding-top: 5em;
-    background-position: center;
+  width: 100%;
+  padding-top: 5em;
+  background-position: center;
+}
+
+.versionEn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 999;
+  background-color: rgb(0, 195, 255);
+  text-align: center;
+  border-radius: 50px;
+}
+
+.versionEn i {
+  padding-top: 17px;
 }
 
 @media screen and (max-width: 1350px) {
@@ -311,6 +329,10 @@ footer {
     display: none;
   }
 
+  .list-mobile {
+    display: block;
+  }
+
   .list-mobile i {
     display: block;
     padding: 1em 0.5em;
@@ -321,7 +343,7 @@ footer {
     padding: 10px;
     height: 100vmax;
     top: 92.1px;
-}
+  }
 
   footer {
     width: 100%;
@@ -346,12 +368,12 @@ footer {
     flex-direction: column;
   }
 
-  .prof-people {
+  .prof-members {
     width: 100%;
     height: 400px;
   }
 
-  .prof-people img {
+  .prof-members img {
     width: 100%;
     height: 100%;
   }
@@ -397,6 +419,7 @@ footer {
   footer {
     flex-direction: column;
   }
+
   .footer-singles {
     width: 90%;
     margin: 10px 0px;

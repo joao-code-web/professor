@@ -31,6 +31,7 @@ header {
 .list-mobile {
   width: 100px;
   height: 100px;
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
@@ -38,9 +39,8 @@ header {
 
 .list-mobile i {
   z-index: 1;
-  transition: 1s;
-  padding: 10px;
   display: none;
+  transition: 1s;
   float: right;
   position: relative;
   text-align: center;
@@ -102,19 +102,16 @@ nav.desktop ul li a {
 
 nav.mobile {
   transition: 1s;
-  opacity: 0;
+  display: none;
   position: absolute;
   left: 0px;
-  top: 57px;
   width: 100%;
-  height: 100%;
   background-color: #0d7c44;
   z-index: 999;
   text-align: center;
 }
 
 nav.mobile ul {
-  padding-top: 200px;
   list-style-type: none;
 }
 
@@ -128,8 +125,8 @@ nav.mobile ul li:hover {
   border: 1px solid black;
 }
 
-nav.desktop ul li:nth-child(5) a,
-nav.mobile ul li:nth-child(5) a {
+nav.desktop ul li:nth-child(4) a,
+nav.mobile ul li:nth-child(4) a {
   color: aqua;
 }
 
@@ -139,16 +136,45 @@ nav.mobile ul li a {
 }
 
 .collaborations {
-  width: 100%;
-  margin: 100px auto;
+  width: 60%;
+  margin: auto;
 }
 
 .collaborations-single {
-  width: 90%;
-  height: 200px;
-  margin: 10px auto;
+  width: 100%; 
+  margin: 8em auto;
   background-color: rebeccapurple;
+  display: flex;
 }
+
+.photo-collaborations {
+  width: 400px;
+}
+
+.univer {
+  width: 100%;
+  height: 100%;
+}
+
+.univer img {
+  width: 100%;
+  height: 100%;
+}
+
+.description-collaborations {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.description-collaborations h1 {
+  color: white;
+}
+
+.description-collaborations p{
+  padding: 2em 0px;
+  color: white;
+}
+
 
 footer {
   width: 100%;
@@ -156,8 +182,7 @@ footer {
   display: flex;
   margin: auto;
   color: white;
-  position: absolute;
-  bottom: -40px;
+  position: relative;
 }
 
 .footer-singles {
@@ -227,6 +252,21 @@ footer {
   padding-top: 5em;
   background-position: center;
 }
+.versionEn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 999;
+  background-color: rgb(0, 195, 255);
+  text-align: center;
+  border-radius: 50px;
+}
+
+.versionEn i {
+  padding-top: 17px;
+}
 
 @media screen and (max-width: 950px) {
   .logo {
@@ -238,10 +278,21 @@ footer {
     display: none;
   }
 
+  .list-mobile {
+    display: block; 
+  }
+
   .list-mobile i {
     display: block;
     display: inline-block;
   }
+
+  .collaborations {
+    width: 95%;
+    margin: auto;
+  }
+
+  /* main */
 
   footer {
     width: 100%;
@@ -265,7 +316,6 @@ footer {
   nav.mobile {
     width: 100%;
     padding: 10px;
-    height: 200px;
     top: 58px;
   }
 
@@ -288,6 +338,13 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+
+  .collaborations {
+    width: 100%;
+    margin: auto;
+  }
+  /* main */
+
   footer {
     flex-direction: column;
   }
