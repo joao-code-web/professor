@@ -137,12 +137,12 @@ nav.mobile ul li a {
 
 .collaborations {
   width: 60%;
-  margin: auto;
+  margin: 8em auto;
 }
 
 .collaborations-single {
   width: 100%; 
-  margin: 8em auto;
+  margin: 4em auto;
   background-color: rebeccapurple;
   display: flex;
 }
@@ -183,6 +183,7 @@ footer {
   margin: auto;
   color: white;
   position: relative;
+  bottom: -20px;
 }
 
 .footer-singles {
